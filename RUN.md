@@ -20,14 +20,14 @@ you have to remove the downloaded image
 	docker rmi <docker-aiida-image-id>
 	
 and build the image on your own
-  `git clone https://github.com/BIGDATA2015-AIIDA-EXTENSION/AiiDA-Docker `
-  `cd AiiDa-Docker; docker built -t aiida .`
+  	git clone https://github.com/BIGDATA2015-AIIDA-EXTENSION/AiiDA-Docker
+  	cd AiiDa-Docker; docker built -t aiida .
 
 
 Once you have the docker container running dont `Crtl-D` because it will stop the container, you can reattach to a running container using 
 
 	> docker ps 
-		(to find the CID of your container)
+	(to find the CID of your container)
 	> docker attach <cid>
 
 Once you are inside the container to the following steps:
@@ -35,6 +35,7 @@ Once you are inside the container to the following steps:
 in `/etc/ssh/sshd_config`
 - uncomment 'PermitRootLogin yes'
 - then `service ssh restart`
+- `sudo /etc/init.d/ssh restart`
 - test ssh root@localhost (inside container)
 - copy dalco `~/.ssh/id_rsa.pub key to container` to  `/root/.ssh/authorized_keys` of your new container
 - check container IP address using ifconfig, if you are outside of container you can use <br>
