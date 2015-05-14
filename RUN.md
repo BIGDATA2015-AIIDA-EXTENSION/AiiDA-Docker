@@ -14,7 +14,11 @@ so if you see this error when the container starts
   2015-05-14 13:59:29 UTC FATAL:  could not access private key file "/etc/ssl/private/ssl-cert-snakeoil.key": Permission denied
                                
 
-you have to remove the downloaded image `docker images` `docker rmi docker-aiida-image-id`
+you have to remove the downloaded image 
+
+	docker images
+	docker rmi <docker-aiida-image-id>
+	
 and build the image on your own
   `git clone https://github.com/BIGDATA2015-AIIDA-EXTENSION/AiiDA-Docker `
   `cd AiiDa-Docker; docker built -t aiida .`
