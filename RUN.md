@@ -1,7 +1,8 @@
 RUNNING AiiDa containers
 
 if you are @ darcco then run
-`docker run -it --name aiidaNew -v /shared:/shared  aiida /sbin/my_init -- bash -l`
+	
+	docker run -it --name aiidaNew -v /shared:/shared  aiida /sbin/my_init -- bash -l
 
 you can also download prebuilt image from dockerhub
 docker run -it --name aiidaNew -v /shared:/shared  skoneka/docker-aiida /sbin/my_init -- bash -l
