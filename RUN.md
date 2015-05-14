@@ -31,10 +31,14 @@ Once you have the docker container running dont `Crtl-D` because it will stop th
 	> docker attach <cid>
 
 Once you are inside the container to the following steps:
- 
-- set 'PermitRootLogin yes' in /etc/ssh/sshd_config; then `service ssh restart`, test ssh root@localhost inside container
-- copy dalco ~/.ssh/id_rsa.pub key to container /root/.ssh/authorized_keys
-- check container IP address using ifconfig, if you are outside of container you can use `docker inspect <CID> | grep IP` to find it
+
+in `/etc/ssh/sshd_config`
+- uncomment 'PermitRootLogin yes'
+- then `service ssh restart`
+- test ssh root@localhost (inside container)
+- copy dalco `~/.ssh/id_rsa.pub key to container` to  `/root/.ssh/authorized_keys` of your new container
+- check container IP address using ifconfig, if you are outside of container you can use <br>
+  `docker inspect <CID> | grep IP`
 
 For conveniance add the container IP address to /etc/hosts at the host machine
 Try logging in with `ssh root@containerIP`
