@@ -30,7 +30,7 @@ Try logging in with `ssh root@containerIP`
 
 the ip address is going to change if you restart you container!
 
-if you restart container then you also need to run `service sshd restart`
+if you restart container then you also need to run `service ssh restart`
 
 remember about commands: docker ps, start, stop, run, inspect
 
